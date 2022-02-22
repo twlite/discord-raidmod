@@ -1,0 +1,46 @@
+{
+  "name": "discord-raidmod",
+  "version": "0.1.0-rc.1",
+  "description": "Simple, beginner friendly and easy-to-use discord.js moderation framework",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "postbuild": "node scripts/postbuild.js",
+    "build:check": "tsc --noEmit",
+    "format": "prettier --write src/**/*.ts",
+    "test": "cd test && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevAndromeda/discord-raidmod.git"
+  },
+  "keywords": [
+    "discord.js",
+    "moderation",
+    "anti-spam",
+    "anti-raid",
+    "protect",
+    "api",
+    "javascript"
+  ],
+  "author": "DevAndromeda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevAndromeda/discord-raidmod/issues"
+  },
+  "homepage": "https://github.com/DevAndromeda/discord-raidmod#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.19",
+    "discord.js": "^13.6.0",
+    "prettier": "^2.5.1",
+    "tslib": "^2.3.1",
+    "tsup": "^5.11.13",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@sapphire/ratelimits": "^2.3.1"
+  }
+}

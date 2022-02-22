@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "strict": true,
+        "lib": ["ES2020"],
+        "allowUnreachableCode": false,
+        "declaration": true,
+        "newLine": "lf",
+        "target": "ES2020",
+        "moduleResolution": "node",
+        "pretty": true,
+        "outDir": "./dist"
+    },
+    "include": ["src/**/*"]
+}
