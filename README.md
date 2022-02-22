@@ -77,19 +77,15 @@ raidMod.on("spam", async (messages, spamType) => {
 // we get the message that triggered this event,
 // and collection of member mentions
 raidMod.on("spamMentions", async (message, mentions) => {
-    const spammers = [...new Set(messages.map(m => m.author.id))];
-
-    for (const spammer of spammers) {
-        if (!message.member.bannable) continue;
-        await message.guild.bans.create(spammer, {
-            days: 1,
-            reason: "Mention spam"
-        })
-        .then((banInfo) => {
-            console.log(`Banned ${banInfo.user?.tag ?? banInfo.tag ?? banInfo} for spamming ${mentions.size} mentions`);
-        })
-        .catch(() => {});
-    }
+    if (!message.member.bannable) return;
+    await message.guild.bans.create(message.member, {
+        days: 1,
+        reason: "Mention spam"
+    })
+    .then((banInfo) => {
+        console.log(`Banned ${banInfo.user?.tag ?? banInfo.tag ?? banInfo} for spamming ${mentions.size} mentions`);
+    })
+    .catch(() => {});
 });
 
 await client.login("TOKEN");

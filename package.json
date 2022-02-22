@@ -1,6 +1,6 @@
 {
   "name": "discord-raidmod",
-  "version": "0.1.0-rc.1",
+  "version": "0.1.0-rc.2",
   "description": "Simple, beginner friendly and easy-to-use discord.js moderation framework",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
